@@ -1,10 +1,12 @@
-
+import ProductSection from "./components/productSection/productSection";
 import "./App.css";
 
 function App() {
- 
-
-  return <></>;
+  return (
+    <>
+      <ProductSection />
+    </>
+  );
 }
 
 export default App;
