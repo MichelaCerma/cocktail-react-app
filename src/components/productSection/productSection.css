@@ -31,3 +31,6 @@
   font-weight: 800;
   font-size: 0.9rem;
 }
+.Drink__button {
+  width: fit-content;
+}

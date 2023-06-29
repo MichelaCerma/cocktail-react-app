@@ -1,12 +1,27 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { GET } from "../../utils/http";
+import ProductItem from "../productItem";
+import "./ProductList.css";
 
-const ProductList = () => {
-  useEffect(() =>
-    fetch("www.thecocktaildb.com/api/json/v1/1/filter.php?i=Gin").then((data) =>
-      console.log(data)
-    )
+const ProductList = ({ ingr, setProductSection }) => {
+  const [listData, setListData] = useState([]);
+
+  useEffect(() => {
+    fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + ingr)
+      .then((res) => res.json())
+      .then((data) => setListData(data.drinks));
+  }, []);
+  return (
+    <div className="ProductList">
+      <h2>{ingr}</h2>
+      {listData.map((drink) => (
+        <ProductItem
+          data={drink}
+          setProductSection={setProductSection}
+          key={drink.idDrink}
+        />
+      ))}
+    </div>
   );
-
-  return <></>;
 };
 export default ProductList;
