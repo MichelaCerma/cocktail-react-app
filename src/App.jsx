@@ -5,8 +5,7 @@ import ProductList from "./components/productList/ProductList";
 import SearchItem from "./components/searchBar/SearchBar";
 
 function App() {
-  const [productSection, setProductSection] = useState("margarita");
-
+  const [productSection, setProductSection] = useState("");
 
   return (
     <>
@@ -19,11 +18,7 @@ function App() {
         />
       ) : (
         <>
-          <ProductList
-            ingr="Rum"
-            setProductSection={setProductSection}
-            setFilterList={setFilterList}
-          />
+          <ProductList ingr="Rum" setProductSection={setProductSection} />
           <ProductList ingr="Vodka" setProductSection={setProductSection} />
           <ProductList ingr="Gin" setProductSection={setProductSection} />
         </>
