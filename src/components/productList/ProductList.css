@@ -1,0 +1,7 @@
+.ProductList {
+  border: 1px solid blue;
+  display: flex;
+  scroll-behavior: auto;
+  overflow-x: auto;
+  gap: 10px;
+}

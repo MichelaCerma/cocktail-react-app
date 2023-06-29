@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 import "./productSection.css";
 import { GET } from "../../utils/http";
 
-const ProductSection = ({ productSection }) => {
+const ProductSection = ({ productSection, setProductSection }) => {
   const [drinkInfo, setDrinkInfo] = useState({});
-
+  const onHandleClick = () => setProductSection("");
   useEffect(() => {
     GET("?s=" + productSection).then((data) => setDrinkInfo(data.drinks[0]));
   }, []);
@@ -33,6 +33,9 @@ const ProductSection = ({ productSection }) => {
           <span className="Drink__instructions--title">Instructions: </span>
           {drinkInfo.strInstructions}
         </p>
+        <button className="Drink__button" onClick={onHandleClick}>
+          X
+        </button>
       </div>
     </div>
   );
