@@ -3,7 +3,7 @@ import { GET } from "../../utils/http";
 import ProductItem from "../productItem";
 import "./ProductList.css";
 
-const ProductList = ({ ingr, setProductSection, setFilterList }) => {
+const ProductList = ({ ingr, setProductSection }) => {
   const [listData, setListData] = useState([]);
 
   useEffect(() => {

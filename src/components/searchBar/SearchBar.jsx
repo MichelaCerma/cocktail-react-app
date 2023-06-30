@@ -1,14 +1,23 @@
 import { useState } from "react";
 import "./SearchBar.css";
 const SearchItem = ({ setProductSection }) => {
+  const [inputValue, setInputValue] = useState("");
   const onHandleSubmit = (e) => {
     e.preventDefault();
-    setProductSection(e.target[0].value);
+    setInputValue(e.target.value);
+    setProductSection(inputValue);
   };
-
+  const onHandleChange = (e) => {
+    setInputValue(e.target.value);
+  };
   return (
     <form onSubmit={onHandleSubmit}>
-      <input type="text" placeholder="Cerca il drink" />
+      <input
+        type="text"
+        placeholder="Cerca il drink"
+        value={inputValue}
+        onChange={onHandleChange}
+      />
       <input type="submit" value="invio" />
     </form>
   );
