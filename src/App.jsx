@@ -2,12 +2,15 @@ import ProductSection from "./components/productSection/productSection";
 import "./App.css";
 import { useEffect, useState } from "react";
 import ProductList from "./components/productList/ProductList";
+import SearchItem from "./components/searchBar/SearchBar";
 
 function App() {
-  const [productSection, setProductSection] = useState();
+  const [productSection, setProductSection] = useState("");
 
   return (
     <>
+      <SearchItem setProductSection={setProductSection} />
+
       {productSection ? (
         <ProductSection
           productSection={productSection}
