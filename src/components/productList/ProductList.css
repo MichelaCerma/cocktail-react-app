@@ -1,7 +1,15 @@
 .ProductList {
-  border: 1px solid blue;
   display: flex;
   scroll-behavior: auto;
+  flex-direction: column;
   overflow-x: auto;
-  gap: 10px;
+  padding-left: 20px;
+  text-transform: capitalize;
+}
+.ProductContainer {
+  display: flex;
+  margin-left: -10px;
+}
+.ProductList:last-child {
+  padding-bottom: 20px;
 }

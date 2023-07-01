@@ -12,7 +12,6 @@ function App() {
   const [ginChecked, setGinChecked] = useState(true);
   return (
     <>
-      <SearchItem setProductSection={setProductSection} />
       {productSection ? (
         <ProductSection
           productSection={productSection}
@@ -20,6 +19,7 @@ function App() {
         />
       ) : (
         <>
+          <SearchItem setProductSection={setProductSection} />
           <FilterSection
             setGinChecked={setGinChecked}
             ginChecked={ginChecked}

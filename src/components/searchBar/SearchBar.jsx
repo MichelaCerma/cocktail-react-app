@@ -11,7 +11,7 @@ const SearchItem = ({ setProductSection }) => {
     setInputValue(e.target.value);
   };
   return (
-    <form onSubmit={onHandleSubmit}>
+    <form onSubmit={onHandleSubmit} className="searchBar">
       <input
         type="text"
         placeholder="Cerca il drink"

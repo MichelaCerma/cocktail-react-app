@@ -1,1 +1,21 @@
-
+.searchBar {
+  padding-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+input[type="text"] {
+  padding: 8px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid lightgray;
+}
+input[type="submit"] {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: black;
+  color: #fff;
+}

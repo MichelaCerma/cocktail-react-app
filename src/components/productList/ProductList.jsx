@@ -13,14 +13,16 @@ const ProductList = ({ ingr, setProductSection }) => {
   }, []);
   return (
     <div className="ProductList">
-      <h2>{ingr}</h2>
-      {listData.map((drink) => (
-        <ProductItem
-          data={drink}
-          setProductSection={setProductSection}
-          key={drink.idDrink}
-        />
-      ))}
+      <h2>{ingr}:</h2>
+      <div className="ProductContainer">
+        {listData.map((drink) => (
+          <ProductItem
+            data={drink}
+            setProductSection={setProductSection}
+            key={drink.idDrink}
+          />
+        ))}
+      </div>
     </div>
   );
 };

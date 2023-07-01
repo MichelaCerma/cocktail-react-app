@@ -21,7 +21,7 @@ const FilterSection = ({
   return (
     <>
       <div className="Ingr">
-        <div className="Ingr__rum">
+        <div className={`Ingr__rum ${rumChecked ? "checked" : ""} `}>
           <label>
             rum
             <input
@@ -31,7 +31,7 @@ const FilterSection = ({
             />
           </label>
         </div>
-        <div className="Ingr__vodka">
+        <div className={`Ingr__vodka ${vodkaChecked ? "checked" : ""} `}>
           <label>
             vodka
             <input
@@ -41,7 +41,7 @@ const FilterSection = ({
             />
           </label>
         </div>
-        <div className="Ingr__gin">
+        <div className={`Ingr__gin ${ginChecked ? "checked" : ""} `}>
           <label>
             gin
             <input
